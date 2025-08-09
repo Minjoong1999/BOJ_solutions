@@ -1,0 +1,45 @@
+#10810 
+
+// 배열의 인덱스를 나타내는법??
+
+// 중첩 for문의 올바른 사용법
+
+N, M = map(int, input().split())
+
+numarr = [0] * N
+
+for a in range(M):
+  i,j,k = map(int, input().split())
+  for b in range(i-1, j):
+    numarr[b] = k
+
+print(" ".join(map(str, numarr)))
+
+// 리스트 슬라이싱으로 for문을 사용하지 않고도 바꿀 수 있었음
+
+#10813
+
+//append는 누적해서 값을 더해줌
+// 0-based indexing과 value값을 비교해서 잘 사용할 수 있어야함
+
+N, M = map(int, input().split())
+
+numarr = []
+
+for i in range(N):
+  numarr.append(i+1)
+
+for _ in range(M):
+  i, j = map(int, input().split())
+  bridge = numarr[i-1]
+  numarr[i-1] = numarr[j-1]
+  numarr[j-1] = bridge
+
+print(" ".join(map(str, numarr)))
+
+
+
+
+
+
+
