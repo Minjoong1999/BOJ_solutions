@@ -38,7 +38,46 @@ for _ in range(M):
 print(" ".join(map(str, numarr)))
 
 
+#5597
 
+// 배열을 오름차순으로 정렬하는 함수
+
+// 집합(set)을 활용하는 연습과 아이디어
+
+submiited = []
+
+for _ in range(28):
+  submiited.append(int(input()))
+sb = set(submiited)
+
+original = set(range(1,31))
+
+numbers = list(original - sb)
+
+numbers.sort()
+
+for i in range(2):
+  print(numbers[i])
+
+
+#3052
+
+import sys
+
+numarr = []
+count = 0
+
+for _ in range(10):
+    a = int(sys.stdin.readline())
+    b = a % 42 
+    numarr.append(b)
+
+numset = set(numarr)
+
+print(len(numset))
+
+
+#10811
 
 
 
