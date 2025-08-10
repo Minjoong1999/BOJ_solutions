@@ -1,1 +1,38 @@
+2025/08/10 Sunday
+
+#1546
+//이터레이션의 반환 값에 대한 이해
+
+N = int(input())
+
+score = list(map(int, input().split()))
+if len(score) > N or len(score) < N:
+  print("올바른 수의 과목 점수를 입력하세요")
+
+M = max(score)
+
+newscore = []
+sum = 0
+
+for i in score:
+  newscore.append(i/M*100)
+
+for i in range(N):
+   sum += newscore[i]
+
+print(sum/N)
+
+
+#27866
+// list함수의 역할, 문자열을 단어 단위로 분리해서 리스트로 저장
+
+s = input()
+S = list(s)
+i = int(input())
+
+print(S[i-1])
+
+#9086
+
+
 
