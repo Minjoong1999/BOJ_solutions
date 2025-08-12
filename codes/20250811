@@ -1,1 +1,153 @@
+#9086
+
+T = int(input())
+n = []
+
+for i in range(T):
+  string = input()
+  s = list(string)
+  n.append(s[0])
+  n.append(s[len(s) - 1])
+
+
+for i in range(0,len(n)-1,2):
+  print(n[i]+n[i+1])
+
+#11654 // 아스키코드
+
+//ord -> 문자를 아스키코드값(정수)로 변환
+//chr --> 아스키코드값을 문자로 변환
+
+letter = input()
+print(ord(letter))
+
+
+
+
+
+#11720
+
+N = int(input())
+
+num = list(map(int,input()))
+
+sum = 0
+
+for i in num:
+  sum += i
+
+print(sum)
+
+
+#10809
+
+alphabet = [
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+    'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+    'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
+    'y', 'z'
+]
+// alphabet = [chr(i) for i in range(ord('a') , ord('z')+1)]
+
+S = input()
+cline = []
+
+for ch in alphabet:
+  if ch in S:
+    cline.append(S.index(ch))
+  else:
+    cline.append("-1")
+
+
+print(" ".join(map(str,cline)))
+
+
+#2675
+
+T = int(input())
+string = ""
+real = []
+
+for i in range(T):
+  R, S = input().split()
+  for j in range(len(S)):
+    string += S[j] * int(R)
+  real.append(string)
+  string = ""
+
+for i in range(T):
+  print(real[i])
+
+#2675
+
+T = int(input())
+
+for i in range(T):
+  R, S = input().split()
+  R = int(R)
+  print(''.join([ch * R for ch in S]))
+
+
+#1152
+
+a = input().split()
+print(len(a))
+
+
+#2908
+
+A, B = input().split()
+A = list(A)
+B = list(B)
+
+A.reverse()
+B.reverse()
+
+A = int("".join(A))
+B = int("".join(B))
+
+if A > B :
+  print(A)
+elif B > A :
+  print(B)
+
+#5622
+
+dial = {'A': 3, 'B':3, 'C':3, 'D':4, 'E':4, 'F':4, 'G':5, 'H':5, 'I':5, 'J':6, 'K':6, 
+        'L':6, 'M':7, 'N':7, 'O':7, 'P':8, 'Q':8, 'R':8, 'S':8, 'T':9, 'U':9, 'V':9, 
+        'W':10, 'X':10, 'Y':10, 'Z':10}
+total = 0
+
+a = input()
+
+for i in a:
+  total += dial[i]
+
+print(total)
+
+
+#10171
+
+print("\\"," "+" "+ " "+ "/" + "\\")
+print(" "+")", " "+"(", ""+"'"+")")
+print("(", " "+ "/","",")","")
+print("","\\"+"("+"_"+"_"+")"+"|")
+
+
+#10172
+// ","를 사용하는 것과 "+"를 사용하고 공백을 직접 주는 것에 대해 이해
+
+print("|"+"\\"+"_"+"/"+"|")
+print("|"+"q","p"+"|"+" "+" "+" "+"/"+"}")
+print("("+" "+"0"+" "+")"+'"'+'"'+'"'+"\\")
+print("|"+'"'+"^"+'"'+"`"+" "+" "+" "+" "+"|")
+print("|"+"|"+"_"+"/"+"="+"\\"+"\\"+"_"+"_"+"|")
+
+
+#11718
+
+
+
+
+
 
