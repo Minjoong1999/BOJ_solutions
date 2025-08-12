@@ -1,1 +1,56 @@
+#3003
+// zip()함수에 대한 이해
+
+currentchess = list(map(int, input().split()))
+chs = [1,1,2,2,2,8]
+
+need = [b-a for a,b in zip(currentchess, chs)]
+
+print(" ".join(map(str, need)))
+
+#10988
+
+p = input()
+
+if p == p[::-1]:
+  print(1)
+else:
+  print(0)
+
+
+#1157
+# 각 알파벳끼리 등장횟수를 비교할 수 있어야함
+# 등장횟수를 어떻게 정의할건지?
+
+import sys
+
+Word = input()
+nu = []
+
+word = Word.upper()
+contender = list(set(word))
+
+nu = [word.count(contender[i]) for i in range(len(contender))]
+max_value = max(nu)
+
+for i in range(len(contender)):
+  if max_value == word.count(contender[i]) and nu.count(max_value) == 1:
+    print(contender[i])
+
+if nu.count(max_value) >= 2:
+  print("?")
+
+#gpt 피드백
+
+word = input().upper()
+contender = list(set(word))
+counts = [word.count(c) for c in contender]
+
+max_count = max(counts)
+
+if counts.count(max_count) > 1:
+    print("?")
+else:
+    print(contender[counts.index(max_count)])
+
 
