@@ -1,1 +1,40 @@
+#2941
 
+word = input()
+crolan = ['dz=','c=', 'c-', 'd-', 'lj', 'nj', 's=', 'z=']
+count = 0
+
+for ch in range(len(word)):
+  for i in range(len(crolan)):
+    if word[ch] == crolan[i]:
+      ch += len(crolan[i])
+      count += 1
+    elif word[ch] != crolan[i]:
+      count += 1
+  
+
+print(count)
+// 틀린 답변
+
+word = input()
+crolan = ['dz=', 'c=', 'c-', 'd-', 'lj', 'nj', 's=', 'z=']
+
+count = 0
+i = 0
+
+while i < len(word):
+    # 가장 긴 특수 알파벳부터 체크
+    matched = False
+    for cro in crolan:
+        if word[i:i+len(cro)] == cro:
+            count += 1
+            i += len(cro)
+            matched = True
+            break
+    if not matched:
+        count += 1
+        i += 1
+
+print(count)
+
+//gpt가 짜준 답변
